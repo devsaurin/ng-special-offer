@@ -1,5 +1,4 @@
 # ng-special-offer
-<<<<<<< HEAD
 
 ...
 
@@ -33,5 +32,3 @@ angular.module('myApp', ['ngSpecialOffer'])
 ## License
 
 MIT
-=======
->>>>>>> 28aeeb8534f87934f3e51caedf1b1a5c33d5a7d5
