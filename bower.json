@@ -1,0 +1,22 @@
+{
+  "name": "ng-special-offer",
+  "version": "0.0.1",
+  "homepage": "https://github.com/AlexDisler/ng-special-offer",
+  "authors": [
+    "Alex <alex@binarypattern.com>"
+  ],
+  "main": "src/ng-special-offer.js",
+  "keywords": [
+    "cordova",
+    "ionic",
+    "apprate"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
