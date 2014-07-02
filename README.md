@@ -1,2 +1,1 @@
-ionic-apprate
-=============
+# ng-special-offer
