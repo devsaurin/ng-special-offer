@@ -53,6 +53,9 @@ Configure when the device is ready:
                 // will be reminded in 5 more uses
             },
         });
+    });
+});
+
 ```
 
 ## More
