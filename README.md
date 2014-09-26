@@ -5,7 +5,8 @@
 ## Features
 
  * Easy to use with Ionic or any AngularJS cordova app
- * ...
+ * Customizable
+ * 100% Javascript
 
 ## Install
 
@@ -57,10 +58,6 @@ Configure when the device is ready:
 }]);
 
 ```
-
-## More
-
-...
 
 ## License
 
