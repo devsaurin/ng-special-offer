@@ -1,6 +1,6 @@
 # ng-special-offer
 
-...
+<img src="ng-special-offer.png"/>
 
 ## Features
 
