@@ -17,6 +17,7 @@ Install ng-special-offer with bower
 Include ng-special-offer from the bower library
 
     <script src="bower_components/ng-special-offer/src/ng-special-offer.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
 
 ## Usage
 
