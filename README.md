@@ -64,6 +64,10 @@ Configure when the device is ready:
 
 ```
 
+## Tutorial
+
+[Prompt User To Rate Ionic Framework Mobile App](https://blog.nraboy.com/2015/02/prompt-user-rate-ionic-framework-mobile-app/) by @nraboy
+
 ## License
 
 MIT
