@@ -39,6 +39,7 @@ Configure when the device is ready:
 
         var appVersion = '1.0.0';
         var iosId = '12345';
+        var androidPackageName = 'your.package.name';
 
         $specialOffer.init({
             id           : 'my-special-offer' + appVersion,
@@ -50,7 +51,11 @@ Configure when the device is ready:
             declineLabel : 'Not interested',
             onAgree      : function () {
                 // agree
-                window.open($specialOffer.appStoreUrl(iosId));
+                if (window.device.platform === 'iOS') {
+                    window.open($specialOffer.appStoreUrl(iosId));
+                } else if (window.device.platform === 'Android') {
+                    window.open($specialOffer.googlePlayUrl(androidPackageName));
+                }
             },
             onDecline   : function () {
                 // declined
