@@ -2,6 +2,8 @@ angular.module('ngSpecialOffer', [])
 
     .factory('$specialOffer', function($q, $localStorage) {
 
+        'use strict';
+
         return {
 
             init : function (config) {
@@ -25,22 +27,22 @@ angular.module('ngSpecialOffer', [])
                     $localStorage.specialOffers[config.id].countOpens = 1;
                     config.onRemindMeLater();
                 };
-                document.addEventListener("resume", function () {
+                document.addEventListener('resume', function () {
                     if ($localStorage.specialOffers[config.id].countOpens >= config.showOnCount && $localStorage.specialOffers[config.id].enabled) {
                         var clickHandler = function (buttonIndex) {
                             switch (buttonIndex) {
-                                case 3:
+                                case 1:
                                     onAgree();
                                     break;
                                 case 2:
-                                    onRemindMeLater();
-                                    break;
-                                case 1:
                                     onDecline();
+                                    break;
+                                case 3:
+                                    onRemindMeLater();
                                     break;
                             }
                         };
-                        var buttonLabels = [config.declineLabel, config.remindLabel, config.agreeLabel];
+                        var buttonLabels = [config.agreeLabel, config.declineLabel, config.remindLabel];
                         navigator.notification.confirm(config.text, clickHandler, config.title, buttonLabels);
                     } else if ($localStorage.specialOffers[config.id].enabled) {
                         $localStorage.specialOffers[config.id].countOpens++;
@@ -51,11 +53,15 @@ angular.module('ngSpecialOffer', [])
             appStoreUrl : function (iosAppId) {
                 var reviewURL = '';
                 if (window.device && parseInt(window.device.version) >= 7) {
-                    reviewURL = "itms-apps://itunes.apple.com/en/app/id" + iosAppId;
+                    reviewURL = 'itms-apps://itunes.apple.com/en/app/id' + iosAppId;
                 } else {
-                    reviewURL = "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=" + iosAppId + "&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software";
+                    reviewURL = 'itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=' + iosAppId + '&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software';
                 }
                 return reviewURL;
+            },
+
+            googlePlayUrl : function (androidAppId) {
+                return 'market://details?id=' + androidAppId;
             }
 
         };
