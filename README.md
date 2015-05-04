@@ -16,7 +16,7 @@ Install ng-special-offer with bower
 
 Add the cordova notification plugin
 
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
+    $ cordova plugin add cordova-plugin-dialogs --save
 
 Include ng-special-offer from the bower library
 
