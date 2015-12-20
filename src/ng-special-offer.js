@@ -1,6 +1,6 @@
 angular.module('ngSpecialOffer', [])
 
-    .factory('$specialOffer', function($q, $localStorage) {
+    .factory('$specialOffer', ['$q', '$localStorage', function($q, $localStorage) {
 
         'use strict';
 
@@ -66,4 +66,4 @@ angular.module('ngSpecialOffer', [])
 
         };
 
-    });
+    }]);
